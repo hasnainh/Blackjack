@@ -10,41 +10,53 @@
 
 @implementation Hand
 
-- (id)init: (Deck*) deck
-{
+- (id)init: (Deck*) deck {
     self = [super init];
     if (self) {
         _cards = [[NSMutableArray alloc] init];
-        [self draw: deck];
-        [self draw: deck];
+        [self drawCard: deck];
+        [self drawCard: deck];
     }
     return self;
 }
 
-- (void)draw: (Deck*) deck
-{
+- (void)drawCard: (Deck*) deck {
     Card* card = [deck drawFromDeck];
     [_cards addObject:card];
 }
 
-- (int)total
-{
+
+- (NSInteger)handTotal {
     int total = 0;
     bool ace=NO;
-    for (Card* card in _cards)
-    {
-        if ([card value]==11)
-        {
+    for (Card* card in _cards) {
+        if ([card cardValue]==1) {
             ace=YES;
         }
-        total += [card value];
+        total += [card cardValue];
     }
     
-    if (total <= 11 && ace)
-    {
+    if (total <= 11 && ace) {
         total += 10;
     }
     return total;
+}
+
+- (NSInteger) dealerFirstHandTotal {
+    return [[_cards objectAtIndex:0] cardValue];
+}
+
+- (void) clearHand {
+    [_cards removeAllObjects];
+}
+
+- (NSString *)display {
+    NSString *currentHand = @"";
+    for (Card* card in _cards) {
+        currentHand = [currentHand stringByAppendingString:[[card display] stringByAppendingString:@"\n"]];
+        //NSLog(@"%d of %@", [card cardValue], [card cardSuit]);
+    }
+    return currentHand;
 }
 
 @end

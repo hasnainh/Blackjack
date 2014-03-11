@@ -13,8 +13,11 @@
 
 @property NSMutableArray *cards;
 
-- (id)init: (Deck*) deck;
-- (void)draw: (Deck*) deck;
-- (int)total;
+- (id) init: (Deck*) deck;
+- (void) drawCard: (Deck*) deck;
+- (NSInteger) handTotal;
+- (NSInteger) dealerFirstHandTotal;
+- (void) clearHand;
+- (NSString *) display;
 
 @end

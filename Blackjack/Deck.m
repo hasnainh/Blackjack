@@ -14,29 +14,28 @@
 {
     self = [super init];
     if (self) {
-        _cards = [[NSMutableArray alloc]initWithCapacity:52];
+        _deckOfCards = [[NSMutableArray alloc] init];
     }
     for (int i=1; i < 14; i++) {
-        for (int x=0; x<4; x++) {
-            [_cards addObject: [[Card alloc] initWithValue:i]]; 
-        }
+        [_deckOfCards addObject: [[Card alloc] initWithValue:i cardSuit:@"Heart"]];
+        [_deckOfCards addObject: [[Card alloc] initWithValue:i cardSuit:@"Club"]];
+        [_deckOfCards addObject: [[Card alloc] initWithValue:i cardSuit:@"Diamond"]];
+        [_deckOfCards addObject: [[Card alloc] initWithValue:i cardSuit:@"Spade"]];
     }
     return self;
 }
 
 -(Card *) drawFromDeck
 {
-    int randomIndex = rand()%[_cards count];
+    int randomIndex = rand()%[_deckOfCards count];
     
-    Card *drawnCard = [_cards objectAtIndex:randomIndex];
+    Card *drawnCard = [_deckOfCards objectAtIndex:randomIndex];
+    [_deckOfCards removeObjectAtIndex:randomIndex];
     
     return drawnCard;
 }
 
--(NSString *) display
-{
-    return [NSString stringWithFormat:@"%@", _cards];
-}
+//-(void) display { NSLog(@"%@", _deckOfCards);}
 
 
 @end

@@ -11,10 +11,10 @@
 
 @interface Deck : NSObject
 
-@property NSMutableArray* cards;
+@property NSMutableArray *deckOfCards;
 
 - (Card *) drawFromDeck;
 
-- (NSString *) display;
+//- (void) display;
 
 @end

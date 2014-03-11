@@ -24,7 +24,6 @@
 		3CA2865E18C60B6A00370CB2 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2865D18C60B6A00370CB2 /* Deck.m */; };
 		3CA2866118C60E0C00370CB2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2866018C60E0C00370CB2 /* Card.m */; };
 		3CA2866418C62ABA00370CB2 /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2866318C62ABA00370CB2 /* Hand.m */; };
-		3CA2866718C62D3E00370CB2 /* Blackjack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2866618C62D3E00370CB2 /* Blackjack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +62,6 @@
 		3CA2866018C60E0C00370CB2 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		3CA2866218C62ABA00370CB2 /* Hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hand.h; sourceTree = "<group>"; };
 		3CA2866318C62ABA00370CB2 /* Hand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hand.m; sourceTree = "<group>"; };
-		3CA2866518C62D3E00370CB2 /* Blackjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blackjack.h; sourceTree = "<group>"; };
-		3CA2866618C62D3E00370CB2 /* Blackjack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blackjack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +130,6 @@
 				3CA2866018C60E0C00370CB2 /* Card.m */,
 				3CA2866218C62ABA00370CB2 /* Hand.h */,
 				3CA2866318C62ABA00370CB2 /* Hand.m */,
-				3CA2866518C62D3E00370CB2 /* Blackjack.h */,
-				3CA2866618C62D3E00370CB2 /* Blackjack.m */,
 				3CA2863018C3B0A000370CB2 /* BlackjackViewController.h */,
 				3CA2863118C3B0A000370CB2 /* BlackjackViewController.m */,
 				3CA2863318C3B0A000370CB2 /* Images.xcassets */,
@@ -276,7 +271,6 @@
 				3CA2862818C3B09F00370CB2 /* main.m in Sources */,
 				3CA2863218C3B0A000370CB2 /* BlackjackViewController.m in Sources */,
 				3CA2862C18C3B09F00370CB2 /* BlackjackAppDelegate.m in Sources */,
-				3CA2866718C62D3E00370CB2 /* Blackjack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +401,7 @@
 				GCC_PREFIX_HEADER = "Blackjack/Blackjack-Prefix.pch";
 				INFOPLIST_FILE = "Blackjack/Blackjack-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -420,6 +415,7 @@
 				GCC_PREFIX_HEADER = "Blackjack/Blackjack-Prefix.pch";
 				INFOPLIST_FILE = "Blackjack/Blackjack-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

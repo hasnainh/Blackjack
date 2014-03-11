@@ -10,9 +10,10 @@
 
 @interface Card : NSObject
 
-@property int value;
+@property NSInteger cardNumber;
+@property NSInteger cardValue;
+@property NSString *cardSuit;
 
-//- (id)initWithRank: (NSString *)r;
-- (id)initWithValue: (int) v;
-
+- (id)initWithValue: (NSInteger) value cardSuit:(NSString*) suit;
+- (NSString *) display;
 @end
