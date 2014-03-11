@@ -17,5 +17,8 @@
 @property Deck *deck;
 @property NSInteger playerBank;
 @property NSInteger gamesPlayed;
+@property NSInteger currentBetAmount;
+
+
 
 @end

@@ -27,7 +27,7 @@
 
 -(Card *) drawFromDeck
 {
-    int randomIndex = rand()%[_deckOfCards count];
+    NSInteger randomIndex = arc4random()%[_deckOfCards count];
     
     Card *drawnCard = [_deckOfCards objectAtIndex:randomIndex];
     [_deckOfCards removeObjectAtIndex:randomIndex];
